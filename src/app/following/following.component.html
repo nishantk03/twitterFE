@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let item of users">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" *ngIf="item.pic==null">
+          <img src="src/assets/images/img.png" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-front" *ngIf="item.pic!=null">
+          <img src={{item.pic}} alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1 style="margin-top: 20%">{{item.firstName}}  {{item.lastName}}</h1>
+          <h5>Age : {{item.dateOfBirth}}</h5>
+          <h5>{{item.gender}}</h5>
+          <h5>{{item.state}}, {{item.country}}</h5>
+          <h5>{{item.emailId}}</h5>
+        </div>
+      </div>
+    </div><br>
+  </div>
+</div>

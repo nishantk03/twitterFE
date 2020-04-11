@@ -1,0 +1,7 @@
+<div id="wrapper" *ngFor="let item of tweet">
+    <p id="text" name="text"  rows="5" style="overflow: hidden; word-wrap: break-word; resize: none; height: 150px; ">
+      {{item.tweet}}
+    </p>
+    <input id="button" type="submit" value="Delete" (click)="deleteTweet(item.id)">
+
+</div>

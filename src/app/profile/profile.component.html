@@ -1,0 +1,51 @@
+<!--
+<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+-->
+
+<div class="row">
+<div class="col-sm-6 col-md-6 col-lg-6">
+  <div *ngIf="url==''">
+    <img src="src/assets/images/img.png" alt="Profile Pic" style="width:500px; height: 500px; margin-top: 20px; margin-left: 10px">
+  </div>
+  <div *ngIf="url!=''">
+    <img [src]="url" alt="Profile Pic" style="width:500px; height: 500px; margin-top: 20px; margin-left: 10px">
+  </div>
+  <div class="container-login100-form-btn p-t-10" style="margin-top: 20px;width:500px">
+    <!--<button  class="login100-form-btn">-->
+      <input class="login100-form-btn" style="margin-top: 5px" type='file' (change)="onSelectFile($event)">
+    <!--</button>-->
+
+  </div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6">
+  <div *ngIf="name!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 200px; margin-right: 50px; width: 500px;">
+    <input class="input100" disabled type="text" [(ngModel)]="name">
+  </div>
+  <div *ngIf="username!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="username">
+  </div>
+  <div *ngIf="emailid!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="emailid">
+  </div>
+  <div *ngIf="age!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="age">
+  </div>
+  <div *ngIf="gender!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="gender">
+  </div>
+  <div *ngIf="state!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="state">
+  </div>
+  <div *ngIf="country!=''" class="wrap-input100 validate-input m-b-10" style="margin-top: 5px; margin-right: 50px; width: 500px;">
+    <input class="input100" type="text" [(ngModel)]="country">
+  </div>
+<!--  <div class="container-login100-form-btn p-t-10" style="margin-top: 20px;width:500px">
+    <button class="login100-form-btn">
+      Update
+    </button>
+  </div>-->
+</div>
+
+<!--<img [src]="url" height="200"> <br/>
+<input type='file' (change)="onSelectFile($event)">-->
+</div>

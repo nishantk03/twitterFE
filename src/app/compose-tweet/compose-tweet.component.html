@@ -1,0 +1,11 @@
+<div id="wrapper">
+
+  <form id="paper" method="get" action="">
+
+    <textarea placeholder="Tweet here" id="text" name="text" [(ngModel)]="tweetMsg" rows="10" style="overflow: hidden; word-wrap: break-word; resize: none; height: 450px; "></textarea>
+    <br>
+    <input id="button" type="submit" value="Create" (click)="postTweet()">
+
+  </form>
+
+</div>
