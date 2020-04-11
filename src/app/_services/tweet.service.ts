@@ -31,4 +31,9 @@ export class TweetService {
     return this.http.get<Tweet[]>(environment.serverUrl+'userfeatures/deleteTweets', {params: param});
 
   }
+
+  getAllTweet(): Observable<Tweet[]> {
+    return this.http.get<Tweet[]>(environment.serverUrl+'userfeatures/getAllTweets');
+
+  }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-welcome',
@@ -9,11 +9,13 @@ import {ActivatedRoute} from "@angular/router";
 export class WelcomeComponent implements OnInit {
   name: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit() {
     this.name = this.route.snapshot.paramMap.get('firstName');
+    this.router.navigate(['home/name/wel']);
   }
 
 }
